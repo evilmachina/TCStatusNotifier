@@ -12,4 +12,5 @@
       <url>http://slicksteramer.info</url>
     </vendor>
   </info>
+  <deployment use-separate-classloader="true" />
 </teamcity-plugin>
