@@ -20,10 +20,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 public class Notifier implements Notificator {
 
@@ -42,7 +39,7 @@ public class Notifier implements Notificator {
     }
 
     public void notifyBuildStarted(@NotNull SRunningBuild build, @NotNull Set<SUser> users) {
-        //To change body of implemented methods use File | Settings | File Templates.
+         notify(build, users, "BuildStarted");
     }
 
     public void notifyBuildSuccessful(@NotNull SRunningBuild build, @NotNull Set<SUser> users) {
@@ -110,4 +107,20 @@ public class Notifier implements Notificator {
     public String getDisplayName() {
         return TYPE_NAME;
     }
+
+    private void notify(SRunningBuild build, Set<SUser> users, String event) {
+
+        for (SUser notifyUser : users) {
+            notify(notifyUser, build, event);
+        }
+    }
+
+    private void notify(SUser notifyUser, SRunningBuild build, String event) {
+        DataPusher pusher = new DataPusher();
+        String url = notifyUser.getPropertyValue(pushToURL);
+        Map<String, String> data = new HashMap<String, String>();
+        data.put("event", event);
+        pusher.push(url, data);
+    }
+
 }

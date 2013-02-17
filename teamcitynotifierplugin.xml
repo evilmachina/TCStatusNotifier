@@ -68,6 +68,10 @@
   
   
   <!-- Project Libraries -->
+
+  <path id="library.basic-http-client.classpath">
+    <pathelement location="lib/basic-http-client.jar"/>
+  </path>
   
   <path id="library.teamcity_open_api_common.classpath">
     <pathelement location="${path.variable.teamcitydistribution}/devPackage/common-api.jar"/>
@@ -117,6 +121,7 @@
     <path refid="library.teamcity_open_api_common.classpath"/>
     <path refid="library.teamcity_open_api_server.classpath"/>
     <path refid="library.tomcat.classpath"/>
+    <path refid="library.basic-http-client.classpath"/>
   </path>
   
   <path id="server.runtime.production.module.classpath">
@@ -125,6 +130,7 @@
     <path refid="library.teamcity_open_api_common.classpath"/>
     <path refid="library.teamcity_open_api_server.classpath"/>
     <path refid="library.tomcat.classpath"/>
+    <path refid="library.basic-http-client.classpath"/>
   </path>
   
   <path id="server.module.classpath">
@@ -133,6 +139,7 @@
     <path refid="library.teamcity_open_api_common.classpath"/>
     <path refid="library.teamcity_open_api_server.classpath"/>
     <path refid="library.tomcat.classpath"/>
+    <path refid="library.basic-http-client.classpath"/>
   </path>
   
   <path id="server.runtime.module.classpath">
@@ -142,6 +149,7 @@
     <path refid="library.teamcity_open_api_common.classpath"/>
     <path refid="library.teamcity_open_api_server.classpath"/>
     <path refid="library.tomcat.classpath"/>
+    <path refid="library.basic-http-client.classpath"/>
   </path>
   
   
