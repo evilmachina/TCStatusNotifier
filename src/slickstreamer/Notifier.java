@@ -3,6 +3,7 @@ package slickstreamer;
 import jetbrains.buildServer.Build;
 import jetbrains.buildServer.BuildType;
 import jetbrains.buildServer.notification.Notificator;
+import jetbrains.buildServer.notification.NotificatorAdapter;
 import jetbrains.buildServer.notification.NotificatorRegistry;
 import jetbrains.buildServer.responsibility.ResponsibilityEntry;
 import jetbrains.buildServer.responsibility.TestNameResponsibilityEntry;
@@ -22,7 +23,7 @@ import org.jetbrains.annotations.Nullable;
 import java.io.IOException;
 import java.util.*;
 
-public class Notifier implements Notificator {
+public class Notifier extends NotificatorAdapter {
 
     private static final String TYPE = "pushNotifier";
 
