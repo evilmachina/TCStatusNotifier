@@ -39,19 +39,19 @@ public class Notifier implements Notificator {
     }
 
     public void notifyBuildStarted(@NotNull SRunningBuild build, @NotNull Set<SUser> users) {
-         notify(build, users, "BuildStarted");
+        notify(build, users, "BuildStarted");
     }
 
     public void notifyBuildSuccessful(@NotNull SRunningBuild build, @NotNull Set<SUser> users) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        notify(build, users, "BuildSuccessful");
     }
 
     public void notifyBuildFailed(@NotNull SRunningBuild build, @NotNull Set<SUser> users) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        notify(build, users, "BuildFailed");
     }
 
     public void notifyBuildFailedToStart(@NotNull SRunningBuild build, @NotNull Set<SUser> users) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        notify(build, users, "BuildFailedToStart");
     }
 
     public void notifyLabelingFailed(@NotNull Build build, @NotNull VcsRoot root, @NotNull Throwable exception, @NotNull Set<SUser> users) {
