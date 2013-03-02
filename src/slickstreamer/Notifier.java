@@ -24,7 +24,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class Notifier extends NotificatorAdapter {
-
+FAILURE
     private static final String TYPE = "pushNotifier";
 
     private static final String TYPE_NAME = "Push Notifier";
